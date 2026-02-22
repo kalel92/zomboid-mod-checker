@@ -56,7 +56,7 @@ def main():
         # Crear un archivo de prueba si no existe
         print(f"No se encontró '{input_file}'. Creando un archivo de prueba de ejemplo...")
         with open(input_file, "w", encoding="utf-8") as f:
-            f.write("2169435993, 2717703136, 99999999999")
+            f.write("2169435993,2717703136,99999999999")
         print(f"Edita '{input_file}' con tus IDs y vuelve a ejecutar el script.")
         return
 
