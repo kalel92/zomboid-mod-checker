@@ -83,7 +83,7 @@ def main():
     # Crear archivo de IDs válidos (separados por coma)
     valid_ids = [mod['id'] for mod in valid_mods]
     with open("valid_mod_ids.txt", "w", encoding="utf-8") as f:
-        f.write(", ".join(valid_ids))
+        f.write(",".join(valid_ids))
     print(f"-> Creado valid_mod_ids.txt con {len(valid_ids)} IDs.")
         
     # Crear archivo de Nombres válidos (separados por punto y coma y slash ;/)
