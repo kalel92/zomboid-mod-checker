@@ -56,7 +56,7 @@ def main():
         # Crear un archivo de prueba si no existe
         print(f"No se encontró '{input_file}'. Creando un archivo de prueba de ejemplo...")
         with open(input_file, "w", encoding="utf-8") as f:
-            f.write("2169435993,2717703136,99999999999")
+            f.write("2169435993;2717703136;99999999999")
         print(f"Edita '{input_file}' con tus IDs y vuelve a ejecutar el script.")
         return
 
@@ -64,8 +64,8 @@ def main():
     with open(input_file, "r", encoding="utf-8") as f:
         content = f.read()
     
-    # Separar por comas y limpiar espacios
-    raw_ids = [m.strip() for m in content.split(",") if m.strip()]
+    # Separar por punto y coma y limpiar espacios
+    raw_ids = [m.strip() for m in content.split(";") if m.strip()]
     
     # Filtrar solo numéricos por si acaso
     mod_ids = [m for m in raw_ids if m.isdigit()]
